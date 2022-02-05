@@ -6,7 +6,7 @@
 #    By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 12:03:12 by ivloisy           #+#    #+#              #
-#    Updated: 2022/02/05 05:29:40 by ivloisy          ###   ########.fr        #
+#    Updated: 2022/02/05 08:33:22 by ivloisy          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ CC = c++
 
 FLAG = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp
+SRC = main.cpp Character.cpp
 
-HDR = whatever.hpp
+HDR = whatever.hpp Character.hpp
 
 OBJ = $(OBJDIR)/*.o
 
