@@ -6,32 +6,30 @@
 /*   By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 05:06:22 by ivloisy           #+#    #+#             */
-/*   Updated: 2022/02/05 06:01:50 by ivloisy          ###   ########.fr       */
+/*   Updated: 2022/02/05 07:33:12 by ivloisy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "whatever.hpp"
+#include "iter.hpp"
+#include "Character.hpp"
 
 int main( void )
 { 
-	int a = 2;
-	int b = 3;
-	int	x = 2;
+	std::cout << std::endl << "\033[4;35m" << "Type Int:" << "\033[0m" << std::endl;
+	int	tabInt[6] = { 0, 1, 2, 3, 4, 5 };
+	iter( tabInt, 6, printElem );
 
-	::swap( a, b );
-	std::cout << "a = " << a << ", b = " << b << ", x = " << x << std::endl;
-	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-	std::cout << "max( a, x ) = " << ::min( a, x ) << std::endl;
-	std::cout << "max( a, x ) = " << ::max( a, x ) << std::endl;
+	std::cout << std::endl << "\033[4;35m" << "Type Float:" << "\033[0m" << std::endl;
+	float	tabFloat[6] = { 0, 1, 2, 3, 4, 5 };
+	iter( tabFloat, 6, printElem );
 
-	std::string c = "chaine1";
-	std::string d = "chaine2";
-
-	::swap(c, d);
-	std::cout << "c = " << c << ", d = " << d << std::endl;
-	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+	std::cout << std::endl << "\033[4;35m" << "Type Class:" << "\033[0m" << std::endl;
+	Character	*tabClass[2];
+	tabClass[0] = new Character("Bob", 34);
+	tabClass[1] = new Character("Jim", 68);
+	iter( *tabClass, 2, printElem );
+	delete tabClass[0];
+	delete tabClass[1];
 
 	return 0;
 }
