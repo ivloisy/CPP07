@@ -24,7 +24,7 @@ class Array
 		Array<T>() :  _size(0), _array(NULL) {}
 		Array<T>( Array<T> const & src ) { *this = src; }
 		Array<T>( unsigned int n ) : _size(n), _array(new T[n]) {}
-		~Array<T>() { if (this->_size > 0 ) delete [] this->_array; }
+		~Array<T>() { delete [] this->_array; }
 
 		Array<T> &		operator=( Array<T> const & rhs )
 		{
@@ -45,7 +45,7 @@ class Array
 
 		T &		operator[]( unsigned int idx )
 		{
-			if ( idx < 0 || idx >= _size || _array == NULL)
+			if ( idx < 0 || idx >= this->_size || this->_array == NULL)
 				throw std::exception();
 			return _array[idx];
 		}

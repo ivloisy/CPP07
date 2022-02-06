@@ -6,7 +6,7 @@
 /*   By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 06:27:01 by ivloisy           #+#    #+#             */
-/*   Updated: 2022/02/05 15:15:49 by ivloisy          ###   ########.fr       */
+/*   Updated: 2022/02/06 04:45:15 by ivloisy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 class Character
 {
 	public:
+		Character();
 		Character( Character const & src );
 		Character( std::string name, int age);
 		virtual ~Character();
@@ -27,9 +28,10 @@ class Character
 
 		std::string	getName() const;
 		int			getAge() const;
+		void		setName( std::string name );
+		void		setAge( int age );
 
 	private:
-		Character();
 		std::string	_name;
 		int			_age;
 };

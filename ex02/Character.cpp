@@ -6,7 +6,7 @@
 /*   By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 06:27:03 by ivloisy           #+#    #+#             */
-/*   Updated: 2022/02/05 15:17:50 by ivloisy          ###   ########.fr       */
+/*   Updated: 2022/02/06 04:45:28 by ivloisy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,18 @@ int	Character::getAge() const
 {
 	return this->_age;
 }
+
+void	Character::setName( std::string name )
+{
+	this->_name = name;
+	return ;
+}
+
+void	Character::setAge( int age )
+{
+	this->_age = age;
+	return ;
+}
+
 
 /* ************************************************************************** */
