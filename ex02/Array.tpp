@@ -21,10 +21,28 @@ class Array
 		T				*_array;
 
 	public:
-		Array<T>() :  _size(0), _array(NULL) {}
-		Array<T>( Array<T> const & src ) { *this = src; }
-		Array<T>( unsigned int n ) : _size(n), _array(new T[n]) {}
-		~Array<T>() { delete [] this->_array; }
+
+		Array<T>() :  _size(0), _array(NULL)
+		{
+			return ;
+		}
+
+		Array<T>( Array<T> const & src )
+		{
+			*this = src;
+			return ;
+		}
+
+		Array<T>( unsigned int n ) : _size(n), _array(new T[n])
+		{
+			return ;
+		}
+
+		~Array<T>() 
+		{
+			delete [] this->_array;
+			return ;
+		}
 
 		Array<T> &		operator=( Array<T> const & rhs )
 		{
@@ -50,6 +68,9 @@ class Array
 			return _array[idx];
 		}
 
-		unsigned int size() const { return _size; }
+		unsigned int size() const
+		{
+			return _size;
+		}
 
 };

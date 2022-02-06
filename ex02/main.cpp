@@ -6,7 +6,7 @@
 /*   By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 05:06:22 by ivloisy           #+#    #+#             */
-/*   Updated: 2022/02/06 05:09:58 by ivloisy          ###   ########.fr       */
+/*   Updated: 2022/02/06 06:47:39 by ivloisy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main( void )
 {
 	try
 	{
-		std::cout << std::endl << "\033[4;35m" << "Type Int:" << "\033[0m" << std::endl;
+		std::cout << std::endl << "\033[4;33m" << "Type Int:" << "\033[0m" << std::endl;
 		Array<int>	a(6);
 		std::cout << std::endl << "\033[4;36m" << "Array a:" << "\033[0m" << std::endl;
 		for (unsigned int i = 0; i < a.size() ; i++)
@@ -33,7 +33,7 @@ int main( void )
 			std::cout << b[i] << std::endl;
 		std::cout << "size:\t" << b.size() << std::endl;
 
-		std::cout << std::endl << "\033[4;35m" << "Type Float:" << "\033[0m" << std::endl;
+		std::cout << std::endl << "\033[4;33m" << "Type Float:" << "\033[0m" << std::endl;
 		Array<float>	c(6);
 		std::cout << std::endl << "\033[4;36m" << "Array c:" << "\033[0m" << std::endl;
 		for (unsigned int i = 0; i < c.size() ; i++)
@@ -52,7 +52,7 @@ int main( void )
 		}
 		std::cout << "size:\t" << d.size() << std::endl;
 
-		std::cout << std::endl << "\033[4;35m" << "Type Class:" << "\033[0m" << std::endl;
+		std::cout << std::endl << "\033[4;33m" << "Type Class:" << "\033[0m" << std::endl;
 
 		Array<Character>	e(2);
 		Array<Character>	f(e);
