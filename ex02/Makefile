@@ -6,7 +6,7 @@
 #    By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 12:03:12 by ivloisy           #+#    #+#              #
-#    Updated: 2022/02/05 15:21:54 by ivloisy          ###   ########.fr        #
+#    Updated: 2022/02/06 12:09:08 by ivloisy          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Array
 
 CC = c++
 
-FLAG = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address -Wshadow -Wno-shadow
+FLAG = -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp Character.cpp
 
