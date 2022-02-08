@@ -6,7 +6,7 @@
 /*   By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 06:27:03 by ivloisy           #+#    #+#             */
-/*   Updated: 2022/02/05 07:11:22 by ivloisy          ###   ########.fr       */
+/*   Updated: 2022/02/08 08:34:10 by ivloisy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ Character::Character() : _name("Character"), _age(42)
 	return ;
 }
 
-Character::Character( const Character & src ) : _name(src._name), _age(src._age)
+Character::Character( const Character & src )
 {
+	*this = src;
 	std::cout << "\033[2;37m" << "Character copy constructor called" << "\033[0m" << std::endl;
 	return ;
 }
@@ -51,7 +52,11 @@ Character::~Character()
 
 Character &				Character::operator=( Character const & rhs )
 {
-	(void)rhs;
+	if ( this != &rhs)
+	{
+		this->_name = rhs.getName();
+		this->_age = rhs.getAge();
+	}
 	return *this;
 }
 

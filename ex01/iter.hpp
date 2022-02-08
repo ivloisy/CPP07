@@ -6,7 +6,7 @@
 /*   By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 05:30:20 by ivloisy           #+#    #+#             */
-/*   Updated: 2022/02/05 07:42:18 by ivloisy          ###   ########.fr       */
+/*   Updated: 2022/02/08 08:58:21 by ivloisy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ void	iter( T const * tab, int size, void (* f)( T const & ) )
 template<typename T>
 void	printElem( T const & elem)
 {
-	std::cout.precision(1);
-	std::cout << std::setiosflags( std::ios::fixed );
 	std::cout << elem << std::endl;
 	return ;
 }

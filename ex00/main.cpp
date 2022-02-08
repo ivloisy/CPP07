@@ -6,7 +6,7 @@
 /*   By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 05:06:22 by ivloisy           #+#    #+#             */
-/*   Updated: 2022/02/05 08:58:54 by ivloisy          ###   ########.fr       */
+/*   Updated: 2022/02/08 12:17:57 by ivloisy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ int main( void )
 	Character	jim("Jim", 68);
 	std::cout << "Bob:" << std::endl << bob << std::endl;
 	std::cout << "Jim:" << std::endl << jim << std::endl;
-	std::cout << "The youngest is: " << ::min( bob, jim ).getName() << std::endl;
+	std::cout << "The youngest is " << ::min( bob, jim ).getName() << std::endl;
 	::swap(bob, jim);
 	std::cout << "Bob:" << std::endl << bob << std::endl;
 	std::cout << "Jim:" << std::endl << jim << std::endl;
-	std::cout << "The oldest is: " << ::max( bob, jim ).getName() << std::endl;
+	std::cout << "The oldest is " << ::max( bob, jim ).getName() << std::endl;
 
 	return 0;
 }
