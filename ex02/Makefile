@@ -6,44 +6,42 @@
 #    By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 12:03:12 by ivloisy           #+#    #+#              #
-#    Updated: 2022/02/06 12:09:08 by ivloisy          ###   ########.fr        #
+#    Updated: 2022/02/08 12:37:04 by ivloisy          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Array
 
-CC = c++
+CXX = c++
 
-FLAG = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -MMD -MP -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp Character.cpp
 
 HDR = Array.hpp Array.tpp Character.hpp
 
-OBJ = $(OBJDIR)/*.o
-
-OBJDIR = objects
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@echo "\033[36m\n$@ creation\t\t\t\t\t🛠\n"
-	$(CC) $(FLAG) -o $@ $+
+	$(CXX) $(CXXFLAGS) -o $@ $+
 	@echo "\033[35m\n$@ has been created with success !\t\t🌈\n"
 
-$(OBJ): $(SRC) $(HDR)
+%.o: %.cpp
 	@echo "\033[32m\nSources files compilation\t\t\t⚙️\n"
-	$(CC) $(FLAG) -c $(SRC)
-	mkdir -p $(OBJDIR)
-	mv *.o $(OBJDIR)
+	$(CXX) $(CXXFLAGS) -c $(SRC)
 
 clean:
 	@echo "\033[33m\nRemove objects files\t\t--->\t\t🗑\n"
-	/bin/rm -rf $(OBJDIR)
+	/bin/rm -rf $(OBJ) *.d
 
 fclean: clean
 	@echo "\033[33m\nRemove $(NAME) file\t\t--->\t\t🗑\n"
 	/bin/rm -f $(NAME)
+
+-include $(OBJ:.o=.d)
 
 re: fclean all
 

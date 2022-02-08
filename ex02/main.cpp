@@ -6,7 +6,7 @@
 /*   By: ivloisy <ivloisy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 05:06:22 by ivloisy           #+#    #+#             */
-/*   Updated: 2022/02/06 06:47:39 by ivloisy          ###   ########.fr       */
+/*   Updated: 2022/02/08 16:43:22 by ivloisy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,10 @@ int main( void )
 			std::cout << f[i] << std::endl;
 		}
 		std::cout << "size:\t" << f.size() << std::endl;
-	
+
 		Array<Character>	g(0);
-	
+		Array<Character *>	h(6);
+
 		std::cout << f[2] << std::endl;
 	}
 	catch(const std::exception& e)

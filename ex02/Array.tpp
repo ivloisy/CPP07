@@ -27,7 +27,7 @@ class Array
 			return ;
 		}
 
-		Array<T>( Array<T> const & src )
+		Array<T>( Array<T> const & src ) :  _size(0), _array(NULL)
 		{
 			*this = src;
 			return ;
@@ -49,7 +49,7 @@ class Array
 			if ( this != &rhs )
 			{
 				this->_size = rhs._size;
-				if (this->_array == NULL)
+				if (this->_array != NULL)
 					delete [] _array;
 				if (this->_size == 0)
 					this->_array = NULL;
